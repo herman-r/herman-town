@@ -13,10 +13,18 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "dotenv": "^16.0.3",
     "gatsby": "^5.8.1",
+    "gatsby-image": "^3.11.0",
     "gatsby-source-contentful": "^8.8.0",
     "gatsby-transformer-remark": "^6.8.0",
+    "got": "^12.6.0",
+    "is-online": "^10.0.0",
+    "public-ip": "^6.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0"

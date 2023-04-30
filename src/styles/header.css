@@ -1,3 +1,43 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header.scrolled a {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+header.scrolled .circle{
+  transition: 0.5s;
+}
+
+a {
+  transition: 0.5s;
+}
+
 h1 {
-  font-size: 2rem;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 100;
+  height: 92px;
+  width: fit-content;
+  transition: 0.5s;
+}
+
+.headerContainer {
+  display: flex;
+  padding: 32px 48px;
+}
+
+.circle {
+  background-color: #f59701;
+  border-radius: 50%;
+  height: 50px;
+  margin: 8px 0 0 auto;
+  min-width: 50px;
+  transition: 0.5s;
 }

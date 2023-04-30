@@ -6,28 +6,25 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Dev Blog",
-    description: "Gatsbyで作成したブログサイトです。",
-    author: "Engineer X"
+    title: "herman town",
+    description: "herman town",
+    author: "herman"
   },
   plugins: [
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
-        accessToken: process.env.GATSBY_CONTENTFUL_API_KEY
-      }
-    },
-    `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        commonmark: true,
-        footnotes: true,
-        pedantic: true,
-        gfm: true,
-        plugins: [],
+        name: `journals`,
+        path: `${__dirname}/src/journals/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 }
