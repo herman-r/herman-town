@@ -7,6 +7,8 @@ import ItemInstagram from "../components/item-instagram"
 import ItemFilmarks from "../components/item-filmarks"
 import ItemSuzuri from "../components/item-suzuri"
 import ItemArticle from "../components/item-article"
+import ItemApple from "../components/item-apple"
+import ItemPicture from "../components/item-picture"
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
 
@@ -40,6 +42,12 @@ export default function Home({ data }) {
             {data.allMarkdownRemark.edges.map(({ node }, index) => (
               <ItemArticle key={node.id} data={node} index={index} />
             ))}
+            <div className="item apple">
+              <ItemApple />
+            </div>
+            <div className="item picrure">
+              <ItemPicture />
+            </div>
           </div>
         </div>
     </>
