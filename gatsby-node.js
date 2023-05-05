@@ -5,18 +5,18 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === "MarkdownRemark") {
-    const slug = node.frontmatter.slug || createFilePath({ node, getNode })
+    let slug = node.frontmatter.slug || createFilePath({ node, getNode })
 
-    createNodeField({
-      node,
-      name: "id",
-      value: node.id,
-    })
+    if (node.frontmatter.contentType === "journal") {
+      slug = `/journal${slug}`
+    } else if (node.frontmatter.contentType === "article") {
+      slug = `/article${slug}`
+    }
 
     createNodeField({
       node,
       name: "slug",
-      value: `/journal${slug}`,
+      value: slug,
     })
 
     createNodeField({
@@ -28,20 +28,22 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       node,
       name: "type",
-      value: "journal",
+      value: node.frontmatter.contentType || "journal",
     })
   }
 }
+
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMarkdownRemark(filter: { fields: { type: { eq: "journal" } } }) {
+      allMarkdownRemark {
         edges {
           node {
             fields {
               slug
+              type
             }
           }
         }
@@ -52,10 +54,11 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve(`./src/templates/journal.js`),
+      component: path.resolve(`./src/templates/${node.fields.type}.js`),
       context: {
         slug: node.fields.slug,
       },
     })
   })
 }
+

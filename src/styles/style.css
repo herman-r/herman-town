@@ -21,22 +21,24 @@ h1 {
 
 .main-section {
     background-color: var(--background-color);
+    max-width: 100%;
 }
 
 .main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: auto;
     gap: 2rem;
     margin: 0 auto;
-    padding-top: 4rem;
+    padding: 2rem;
     max-width: 1000px;
+    box-sizing: border-box;
 }
 
 .item {
-    height: 0;
-    padding-top: 100%;
     position: relative;
+    width: 100%;
+    padding-top: 100%;
 }
 
 .journal {
@@ -60,5 +62,35 @@ h1 {
 }
 
 .suzuri {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+.article.article-0 {
+    background-color: #ffffff;
+    border-radius: 2rem;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.article.article-1 {
+    background-color: #ffffff;
+    border-radius: 2rem;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.article.article-2 {
+    background-color: #ffffff;
+    border-radius: 2rem;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.article.article-3 {
+    background-color: #ffffff;
+    border-radius: 2rem;
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
 }
 

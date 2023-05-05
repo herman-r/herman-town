@@ -9,7 +9,7 @@ const ItemJournal = ({ data }) => {
   return (
     <div className="item-journal">
       <Link to={fields.slug}>
-        <p>{frontmatter.date}</p>
+        <p className="date">{frontmatter.date}</p>
       </Link>
     </div>
   )
