@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import  "../styles/item-journal.css"
 
 const ItemJournal = ({ data }) => {
-  const { frontmatter, html, fields } = data
+  const { frontmatter, fields } = data
 
   return (
     <div className="item-journal">
