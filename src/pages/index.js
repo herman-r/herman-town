@@ -6,11 +6,14 @@ import ItemTwitter from "../components/item-twitter"
 import ItemInstagram from "../components/item-instagram"
 import ItemFilmarks from "../components/item-filmarks"
 import ItemSuzuri from "../components/item-suzuri"
+import ItemArticle from "../components/item-article"
 import { graphql } from "gatsby"
 import Seo from "../components/seo"
 
 export default function Home({ data }) {
   const { markdownRemark } = data
+  console.log(data)
+  console.log(data.allMarkdownRemark)
 
   return (
     <>
@@ -34,6 +37,9 @@ export default function Home({ data }) {
             <div className="item suzuri">
               <ItemSuzuri />
             </div>
+            {data.allMarkdownRemark.edges.map(({ node }, index) => (
+              <ItemArticle key={node.id} data={node} index={index} />
+            ))}
           </div>
         </div>
     </>
@@ -53,5 +59,24 @@ export const query = graphql`
         slug
       }
     }
+    allMarkdownRemark(
+      filter: { fields: { type: { eq: "article" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 4
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
   }
 `
+
