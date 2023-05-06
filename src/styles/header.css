@@ -1,43 +1,29 @@
 header {
+  background-color: var(--header-background-color);
+  max-width: 400px;
   position: sticky;
   top: 0;
+  left: 0;
   z-index: 10;
 }
 
-header.scrolled a {
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.5s;
-}
-
-header.scrolled .circle{
-  transition: 0.5s;
-}
-
-a {
-  transition: 0.5s;
-}
-
-h1 {
+.header-title {
   color: #ffffff;
-  display: inline-block;
-  font-size: 4rem;
-  font-weight: 100;
-  height: 92px;
-  width: fit-content;
-  transition: 0.5s;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 16px;
+  vertical-align: bottom;
 }
 
 .headerContainer {
   display: flex;
-  padding: 32px 48px;
+  align-items: center;
 }
 
 .circle {
   background-color: #f59701;
   border-radius: 50%;
-  height: 50px;
-  margin: 8px 0 0 auto;
-  min-width: 50px;
-  transition: 0.5s;
+  height: 32px;
+  margin: 0px 16px 0 auto;
+  min-width: 32px;
 }

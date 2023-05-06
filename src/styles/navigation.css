@@ -1,0 +1,29 @@
+.navigation {
+  border-top: solid 1px var(--border-color);
+  background-color: var(--background-color);
+  max-width: 400px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.navigationContainer {
+  display: flex;
+  text-align: center;
+}
+
+.nav {
+  padding: 8px;
+  width: 100%;
+}
+
+.navIcon {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.nav p {
+  font-size: 12px;
+  margin-top: 4px;
+}

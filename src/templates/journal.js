@@ -1,14 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Header from "../components/header"
 
-export default ({ data }) => {
+const Journal = ({ data }) => {
   const journal = data.markdownRemark
 
   return (
-    <div>
-      <h1>{journal.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: journal.html }} />
-    </div>
+    <>
+      <Header />
+      <div className="content">
+        <h1 className="journal-h1">{journal.frontmatter.title}</h1>
+        <div dangerouslySetInnerHTML={{ __html: journal.html }} />
+      </div>
+    </>
   )
 }
 
@@ -23,3 +27,5 @@ export const query = graphql`
     }
 }
 `
+
+export default Journal;
