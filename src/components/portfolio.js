@@ -26,7 +26,7 @@ export default function Portfolio() {
         role="button"
         tabIndex={0}
       >
-        <p>portfolio</p>
+        <p>Portfolio</p>
         <FontAwesomeIcon icon={faAngleRight} className={`toggleIcon ${isOpen ? 'opened' : 'closed'}`} />
       </div>
       <div className={`content ${isOpen ? 'visible' : 'hidden'}`}>
