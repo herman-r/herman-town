@@ -1,4 +1,5 @@
 import React from "react"
+import Seo from "../components/seo"
 import { graphql } from "gatsby"
 import JournalHeader from "../components/journalHeader"
 import Navigation from "../components/navigation"
@@ -10,6 +11,7 @@ const Journal = ({ data }) => {
 
   return (
     <>
+      <Seo title="herman town" description="this is herman town." />
       <JournalHeader title={journal.frontmatter.title}/>
       <div className="journalContent">
         <div dangerouslySetInnerHTML={{ __html: journal.html }} />

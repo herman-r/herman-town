@@ -27,6 +27,8 @@
 
 .nav.active p {
   color: var(--active-nav-color);
+  font-size: 12px;
+  margin-top: 4px;
 }
 
 .nav.active .navIcon {

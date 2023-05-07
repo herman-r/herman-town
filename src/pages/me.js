@@ -1,4 +1,5 @@
 import React from "react"
+import Seo from "../components/seo"
 import Header from "../components/header"
 import Sns from "../components/sns"
 import Navigation from "../components/navigation"
@@ -16,6 +17,7 @@ export default function Me() {
 
   return (
     <div>
+      <Seo title="herman town" description="this is herman town." />
       <Header title="Me"/>
       <Navigation />
       <div className="section profile">

@@ -9,17 +9,20 @@
     --active-nav-color: #e0e0e0;
     --no-active-nav-color: #5c5c5c;
     --border-color: #2E2F38;
+    font-family: 'Open Sans','Noto Sans JP',apple-system, BlinkMacSystemFont, Roboto, 'Lucida Grande', Helvetica, Arial,sans-serif;
 }
 
 /* main */
 
 html {
-    background-color: white;
+    background-color: var(--background-color);
     box-sizing: border-box;
 }
 
 body {
     background-color: var(--background-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
     margin: 0 auto;
     max-width: 400px;
     min-height: 100dvh;

@@ -27,12 +27,16 @@ const Seo = ({ title, description }) => {
                 },
                 {
                     property: `og:site_name`,
-                    content: `Dev Blog`,
+                    content: `herman town`,
                 },
                 {
                     property: `og:locale`,
                     content: `ja_JP`,
                 },
+                {
+                    name: `theme-color`,
+                    content: `#202020`,
+                }
             ]}
         />
     )

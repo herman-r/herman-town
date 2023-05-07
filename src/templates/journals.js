@@ -1,4 +1,5 @@
 import React from "react"
+import Seo from "../components/seo"
 import { Link } from "gatsby"
 import ChannelHeader from "../components/channelHeader"
 import Navigation from "../components/navigation"
@@ -10,6 +11,7 @@ export default function Journals({ pageContext }) {
 
   return (
     <div>
+      <Seo title="herman town" description="this is herman town." />
       <ChannelHeader title="journal" description="日記みたいな感じ"/>
       <div className="journals">
         {journals.map(({ node }) => (

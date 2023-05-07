@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Seo from "../components/seo"
 import Header from "../components/header"
 import Navigation from "../components/navigation"
 
@@ -18,6 +19,7 @@ export default function Search() {
 
   return (
     <div>
+      <Seo title="herman town" description="this is herman town." />
       <Header title="Search"/>
       <div className="search">
         <form onSubmit={handleSubmit}>

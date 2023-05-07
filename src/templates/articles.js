@@ -1,4 +1,5 @@
 import React from "react"
+import Seo from "../components/seo"
 import { Link } from "gatsby"
 import Header from "../components/header"
 import Navigation from "../components/navigation"
@@ -10,6 +11,7 @@ export default function Articles({ pageContext }) {
 
   return (
     <div>
+      <Seo title="herman town" description="this is herman town." />
       <Header title="Articles" />
       <div className="articles">
         {articles.map(({ node }) => (
