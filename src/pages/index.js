@@ -8,6 +8,8 @@ import Navigation from "../components/navigation"
 import Seo from "../components/seo"
 
 import { faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { config } from "@fortawesome/fontawesome-svg-core"
+config.autoAddCss = false;
 
 export default function Home() {
   const tw_url="https://twitter.com/___herman";
