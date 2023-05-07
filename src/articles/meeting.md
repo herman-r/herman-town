@@ -1,6 +1,7 @@
 ---
+emoji: 💻
 title: ミーティングに関する自戒の念
-date: 2022-04-25
+date: 2023/02/26
 author: herman
 contentType: article
 ---

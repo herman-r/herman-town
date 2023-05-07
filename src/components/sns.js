@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 export default function Sns(props) {
   return (
       <Link to={props.url} target="_blank">
-        <div className="item">
+        <div className="item sns-item">
           <FontAwesomeIcon className="icon" icon={props.icon} />
           <p className="text">{props.sns}</p>
         </div>

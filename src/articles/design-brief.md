@@ -1,6 +1,7 @@
 ---
+emoji: 📃
 title: デザインブリーフは徹底的に書きたい
-date: 2022-04-24
+date: 2023/02/16
 author: herman
 contentType: article
 ---

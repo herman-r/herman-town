@@ -30,7 +30,11 @@ export default function Portfolio() {
         <FontAwesomeIcon icon={faAngleRight} className={`toggleIcon ${isOpen ? 'opened' : 'closed'}`} />
       </div>
       <div className={`content ${isOpen ? 'visible' : 'hidden'}`}>
-        <Link to="#" className={`item ${isOpen ? 'visible' : 'hidden'}`}>
+        <Link to="#" className={`item disable-item ${isOpen ? 'visible' : 'hidden'}`}>
+          <p className="hash">#</p>
+          <p className="text">none</p>
+        </Link>
+        <Link to="#" className={`item disable-item ${isOpen ? 'visible' : 'hidden'}`}>
           <p className="hash">#</p>
           <p className="text">none</p>
         </Link>

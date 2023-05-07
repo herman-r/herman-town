@@ -10,7 +10,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (node.frontmatter.contentType === "journal") {
       slug = `/journal${slug}`
     } else if (node.frontmatter.contentType === "article") {
-      slug = `/article${slug}`
+      slug = `/articles${slug}`
     }
 
     createNodeField({
@@ -38,18 +38,35 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         edges {
           node {
             fields {
               slug
               type
             }
+            frontmatter {
+              date
+              title
+              emoji
+            }
           }
         }
       }
     }
   `)
+
+  const articles = result.data.allMarkdownRemark.edges.filter(
+    ({ node }) => node.fields.type === "article"
+  )
+
+  createPage({
+    path: "/articles",
+    component: path.resolve(`./src/templates/articles.js`),
+    context: {
+      articles: articles,
+    },
+  })
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({

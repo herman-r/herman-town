@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <Seo title="herman town" description="this is herman town." />
-      <Header />
+      <Header title="herman town"/>
       <div className="section">
         <Sns sns="Twitter" icon={faTwitter} url={tw_url} />
         <Sns sns="Instagram" icon={faInstagram} url={ig_url} />
@@ -34,45 +34,3 @@ export default function Home() {
     </>
   )
 }
-
-export const query = graphql`
-query {
-  latestJournal: allMarkdownRemark(
-    filter: { fields: { type: { eq: "journal" } } }
-    sort: { fields: frontmatter___date, order: DESC }
-    limit: 1
-  ) {
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          date(formatString: "MMMM DD, YYYY")
-        }
-        html
-        fields {
-          slug
-        }
-      }
-    }
-  }
-  allMarkdownRemark(
-    filter: { fields: { type: { eq: "article" } } }
-    sort: { fields: [frontmatter___date], order: DESC }
-    limit: 4
-  ) {
-    edges {
-      node {
-        id
-        frontmatter {
-          title
-          date(formatString: "MMMM DD, YYYY")
-        }
-        fields {
-          slug
-        }
-      }
-    }
-  }
-}
-`
