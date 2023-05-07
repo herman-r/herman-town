@@ -1,17 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Header from "../components/header"
+import JournalHeader from "../components/journalHeader"
+import Navigation from "../components/navigation"
+
+import "../styles/journal.css"
 
 const Journal = ({ data }) => {
   const journal = data.markdownRemark
 
   return (
     <>
-      <Header />
-      <div className="content">
-        <h1 className="journal-h1">{journal.frontmatter.title}</h1>
+      <JournalHeader title={journal.frontmatter.title}/>
+      <div className="journalContent">
         <div dangerouslySetInnerHTML={{ __html: journal.html }} />
       </div>
+      <Navigation />
     </>
   )
 }

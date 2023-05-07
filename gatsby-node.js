@@ -10,7 +10,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     if (node.frontmatter.contentType === "journal") {
       slug = `/journal${slug}`
     } else if (node.frontmatter.contentType === "article") {
-      slug = `/articles${slug}`
+      slug = `/article${slug}`
     }
 
     createNodeField({
@@ -49,6 +49,7 @@ exports.createPages = async ({ graphql, actions }) => {
               date
               title
               emoji
+              description
             }
           }
         }
@@ -60,11 +61,23 @@ exports.createPages = async ({ graphql, actions }) => {
     ({ node }) => node.fields.type === "article"
   )
 
+  const journals = result.data.allMarkdownRemark.edges.filter(
+    ({ node }) => node.fields.type === "journal"
+  )
+
   createPage({
-    path: "/articles",
+    path: "/article",
     component: path.resolve(`./src/templates/articles.js`),
     context: {
       articles: articles,
+    },
+  })
+
+  createPage({
+    path: "/journal",
+    component: path.resolve(`./src/templates/journals.js`),
+    context: {
+      journals: journals,
     },
   })
 

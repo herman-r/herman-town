@@ -1,0 +1,45 @@
+.journals {
+  padding: 0px 16px;
+}
+
+.journalContainer {
+  display: flex;
+  margin-top: 16px;
+}
+
+.journalContainer img {
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.journalEmoji {
+  align-items: center;
+  background-color: var(--background-gray-color);
+  border-radius: 4px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+}
+
+.journalEmoji p {
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 40px;
+}
+
+.journalTitle {
+  margin: 0px 0px 16px 16px;
+}
+
+.journalTitle h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.journalDate {
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.5rem;
+  font-weight: bold;
+  padding-bottom: 4px;
+}

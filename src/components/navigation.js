@@ -10,7 +10,7 @@ export default function Navigation() {
 
   const isActive = (path) => {
     if (path === '/') {
-      return location.pathname === path;
+      return location.pathname === path || location.pathname.startsWith('/journal');
     }
     return location.pathname.startsWith(path);
   };
@@ -22,7 +22,7 @@ export default function Navigation() {
           <FontAwesomeIcon icon={faHouse} className="navIcon" />
           <p>Home</p>
         </Link>
-        <Link to="/articles" className={`nav ${isActive("/articles") ? "active" : ""}`}>
+        <Link to="/article" className={`nav ${isActive("/article") ? "active" : ""}`}>
           <FontAwesomeIcon icon={faNewspaper} className="navIcon" />
           <p>Article</p>
         </Link>

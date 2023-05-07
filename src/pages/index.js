@@ -5,11 +5,9 @@ import Sns from "../components/sns"
 import Channel from "../components/Channel"
 import Portfolio from "../components/portfolio"
 import Navigation from "../components/navigation"
-import { graphql } from "gatsby"
 import Seo from "../components/seo"
 
-import { faTwitter } from "@fortawesome/free-brands-svg-icons"
-import { faInstagram } from "@fortawesome/free-brands-svg-icons"
+import { faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons"
 
 export default function Home() {
   const tw_url="https://twitter.com/___herman";

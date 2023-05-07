@@ -30,9 +30,9 @@ export default function Channel() {
         <FontAwesomeIcon icon={faAngleRight} className={`toggleIcon ${isOpen ? 'opened' : 'closed'}`} />
       </div>
       <div className={`content ${isOpen ? 'visible' : 'hidden'}`}>
-        <Link to="#" className={`item ${isOpen ? 'visible' : 'hidden'}`}>
+        <Link to="/journal" className={`item ${isOpen ? 'visible' : 'hidden'}`}>
           <p className="hash">#</p>
-          <p className="text">Journal</p>
+          <p className="text">journal</p>
         </Link>
       </div>
     </div>
