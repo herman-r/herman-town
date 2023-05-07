@@ -15,6 +15,7 @@ const Journal = ({ data }) => {
       <JournalHeader title={journal.frontmatter.title}/>
       <div className="journalContent">
         <div dangerouslySetInnerHTML={{ __html: journal.html }} />
+        <p className="journalDateBottom">{journal.frontmatter.date}</p>
       </div>
       <Navigation />
     </>

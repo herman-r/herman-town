@@ -1,3 +1,8 @@
 .journalContent {
   margin: 24px 16px 0px 16px;
 }
+
+.journalDateBottom {
+  margin-top: 24px;
+  font-size: 0.75rem;
+}
