@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { useLocation } from "@reach/router"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHouse, faNewspaper, faHeart, faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faHouse, faNewspaper, faBook, faMagnifyingGlass, faUser } from "@fortawesome/free-solid-svg-icons"
 import "../styles/navigation.css"
 
 export default function Navigation() {
@@ -26,9 +26,9 @@ export default function Navigation() {
           <FontAwesomeIcon icon={faNewspaper} className="navIcon" />
           <p>Article</p>
         </Link>
-        <Link to="/likes" className={`nav ${isActive("/likes") ? "active" : ""}`}>
-          <FontAwesomeIcon icon={faHeart} className="navIcon" />
-          <p>Like</p>
+        <Link to="/log" className={`nav ${isActive("/log") ? "active" : ""}`}>
+          <FontAwesomeIcon icon={faBook} className="navIcon" />
+          <p>Log</p>
         </Link>
         <Link to="/search" className={`nav ${isActive("/search") ? "active" : ""}`}>
           <FontAwesomeIcon icon={faMagnifyingGlass} className="navIcon" />

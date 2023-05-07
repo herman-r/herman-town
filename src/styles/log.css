@@ -1,4 +1,4 @@
-.likes {
+.logs {
   margin: 16px 16px;
 }
 
@@ -24,6 +24,34 @@
 }
 
 .movie-date {
+  color: var(--text-gray-color);
+  font-size: 0.75rem;
+  margin: 0px 0px 0px auto;
+}
+
+/* book */
+
+.books-title {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.books-title h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.books-title p {
+  color: #4ea6cc;
+}
+
+.book-title {
+  margin-top: 16px;
+}
+
+.book-date {
   color: var(--text-gray-color);
   font-size: 0.75rem;
   margin: 0px 0px 0px auto;

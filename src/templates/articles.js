@@ -11,7 +11,6 @@ export default function Articles({ pageContext }) {
   return (
     <div>
       <Header title="Articles" />
-      <Navigation />
       <div className="articles">
         {articles.map(({ node }) => (
           <Link to={node.fields.slug}>
@@ -25,6 +24,7 @@ export default function Articles({ pageContext }) {
           </Link>
         ))}
       </div>
+      <Navigation />
     </div>
   )
 }

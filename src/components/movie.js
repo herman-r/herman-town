@@ -1,5 +1,5 @@
 import React from "react"
-import "../styles/likes.css"
+import "../styles/log.css"
 
 export default function Movie(props) {
   return (

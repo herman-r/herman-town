@@ -1,7 +1,8 @@
 import React from "react"
+import { Link } from "gatsby"
 import Movie from "../components/movie"
 
-import "../styles/likes.css"
+import "../styles/log.css"
 
 export default function Movies(props) {
   const movie1 = {
@@ -21,10 +22,12 @@ export default function Movies(props) {
 
   return (
     <div>
-      <div className="likes">
+      <div className="logs">
         <div className="movies-title">
           <h2>Recently Watched</h2>
-          <p>Filmarks</p>
+          <Link to="https://filmarks.com/users/HerMan" target="_blank">
+            <p>Filmarks</p>
+          </Link>
         </div>
         <Movie title={movie1.title} date={movie1.date} />
         <Movie title={movie2.title} date={movie2.date} />
