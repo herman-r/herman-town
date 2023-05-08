@@ -1,0 +1,44 @@
+.general {
+  padding: 0px 16px;
+}
+
+.generalContainer {
+  display: flex;
+  margin-top: 16px;
+}
+
+.generalContainer img {
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.generalEmoji {
+  background-color: var(--background-gray-color);
+  border-radius: 4px;
+  text-align: center;
+  min-width: 40px;
+  height: 40px;
+}
+
+.generalEmoji p {
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 40px;
+}
+
+.generalTitle {
+  margin: 0px 0px 16px 16px;
+}
+
+.generalTitle h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.generalDate {
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding-bottom: 4px;
+}

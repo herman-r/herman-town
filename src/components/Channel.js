@@ -34,6 +34,10 @@ export default function Channel() {
           <p className="hash">#</p>
           <p className="text">journal</p>
         </Link>
+        <Link to="/general" className={`item ${isOpen ? 'visible' : 'hidden'}`}>
+          <p className="hash">#</p>
+          <p className="text">general</p>
+        </Link>
       </div>
     </div>
   )
