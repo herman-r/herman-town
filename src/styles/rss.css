@@ -1,0 +1,41 @@
+.rss {
+  padding: 0px 16px;
+}
+
+.rssContainer {
+  display: flex;
+  margin-top: 16px;
+}
+
+.rssContainer img {
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.rssEmoji {
+  background-color: var(--background-gray-color);
+  border-radius: 4px;
+  text-align: center;
+  min-width: 40px;
+  height: 40px;
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 40px;
+}
+
+.rssTitle {
+  margin: 0px 0px 16px 16px;
+}
+
+.rssTitle h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.rssDate {
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding-bottom: 4px;
+}

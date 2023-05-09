@@ -29,6 +29,22 @@ export default function General() {
               </div>
             </div>
           </Link>
+          <Link to="#">
+            <div className="general-list">
+              <p className="generalDate">2023-05-09</p>
+              <div className="generalContainer">
+                <div className="generalEmoji">
+                  <p>🌞</p>
+                </div>
+                <div className="generalTitle">
+                  <h2>RSSに対応しました</h2>
+                  <p>
+                    herman.town/rss.xmlを張り付ければフィードを取得できると思うます！
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Link>
       </div>
       <Navigation />
     </div>

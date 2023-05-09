@@ -31,13 +31,17 @@ export default function Channel() {
       </div>
       <div className={`content ${isOpen ? 'visible' : 'hidden'}`}>
       <Link to="/general" className={`item ${isOpen ? 'visible' : 'hidden'}`}>
-          <p className="hash">#</p>
-          <p className="text">general</p>
-        </Link>
-        <Link to="/journal" className={`item ${isOpen ? 'visible' : 'hidden'}`}>
-          <p className="hash">#</p>
-          <p className="text">journal</p>
-        </Link>
+        <p className="hash">#</p>
+        <p className="text">general</p>
+      </Link>
+      <Link to="/journal" className={`item ${isOpen ? 'visible' : 'hidden'}`}>
+        <p className="hash">#</p>
+        <p className="text">journal</p>
+      </Link>
+      <Link to="/rss" className={`item ${isOpen ? 'visible' : 'hidden'}`}>
+        <p className="hash">#</p>
+        <p className="text">rss</p>
+      </Link>
       </div>
     </div>
   )
