@@ -8,6 +8,7 @@ module.exports = {
   siteMetadata: {
     title: "herman town",
     description: "herman town",
+    siteUrl: "https://herman.town",
     author: "herman"
   },
   plugins: [
@@ -33,6 +34,49 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return {
+                  title: edge.node.frontmatter.title,
+                  description: edge.node.frontmatter.description || edge.node.excerpt,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  author: edge.node.frontmatter.author || site.siteMetadata.author,
+                };
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] }
+                  filter: { frontmatter: { contentType: { in: ["journal", "article"] } } }
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                        description
+                        author
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
+            title: "herman town",
+          },
+        ],
+      },
+    },
   ],
 }
 
