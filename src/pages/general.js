@@ -37,7 +37,7 @@ export default function General() {
                   <p>🌞</p>
                 </div>
                 <div className="generalTitle">
-                  <h2>RSSに対応しました</h2>
+                  <h2>RSSに対応できたか？</h2>
                   <p>
                     herman.town/rss.xmlを張り付ければフィードを取得できると思うます！
                   </p>
