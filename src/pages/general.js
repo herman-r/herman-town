@@ -45,6 +45,22 @@ export default function General() {
               </div>
             </div>
           </Link>
+          <Link to="#">
+            <div className="general-list">
+              <p className="generalDate">2023-05-14</p>
+              <div className="generalContainer">
+                <div className="generalEmoji">
+                  <p>🌞</p>
+                </div>
+                <div className="generalTitle">
+                  <h2>ページネーションの追加</h2>
+                  <p>
+                    journalを見やすくするためにページネーションを追加してみた。ちゃんと出来てるかな。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </Link>
       </div>
       <Navigation />
     </div>

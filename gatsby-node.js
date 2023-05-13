@@ -81,12 +81,19 @@ exports.createPages = async ({ graphql, actions }) => {
     },
   })
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const posts = result.data.allMarkdownRemark.edges;
+
+  posts.forEach(({ node }, index) => {
+    const prev = index === 0 ? null : posts[index - 1].node;
+    const next = index === (posts.length - 1) ? null : posts[index + 1].node;
+
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/templates/${node.fields.type}.js`),
       context: {
         slug: node.fields.slug,
+        prevSlug: prev ? prev.fields.slug : null,
+        nextSlug: next ? next.fields.slug : null,
       },
     })
   })

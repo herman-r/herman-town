@@ -1,0 +1,19 @@
+.pagination {
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 16px;
+}
+
+.prev {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.next {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
