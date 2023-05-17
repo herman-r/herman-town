@@ -6,18 +6,18 @@ import "../styles/log.css"
 
 export default function Movies(props) {
   const movie1 = {
-    'title': 'Nope',
-    'date': '2023/05/09'
+    'title': 'Mickey: The Story of a Mouse',
+    'date': '2023/05/18'
   }
 
   const movie2 = {
-    'title': 'Orphan',
-    'date': '2023/05/08'
+    'title': 'Oswald the Lucky Rabbit',
+    'date': '2023/05/16'
   }
 
   const movie3 = {
-    'title': "Guardians of the Galaxy Vol. 3",
-    'date': '2023/05/04'
+    'title': "Nope",
+    'date': '2023/05/09'
   }
 
   return (

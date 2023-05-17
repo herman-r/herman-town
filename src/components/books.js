@@ -6,18 +6,18 @@ import "../styles/log.css"
 
 export default function Books(props) {
   const book1 = {
+    'title': 'ムーブ ユア バス',
+    'date': '2023/05/17'
+  }
+
+  const book2 = {
     'title': '縁の下のUIデザイン──小さな工夫で大きな効果をもたらす実践TIPS＆テクニック WEB+DB PRESS plus',
     'date': '2023/05/02'
   }
 
-  const book2 = {
-    'title': '情報アーキテクチャ 第4版 ―見つけやすく理解しやすい情報設計',
-    'date': '2023/02/09'
-  }
-
   const book3 = {
-    'title': "The Elements of User Experience[固定版]: 5段階モデルで考えるUXデザイン",
-    'date': '2023/01/31'
+    'title': "情報アーキテクチャ 第4版 ―見つけやすく理解しやすい情報設計",
+    'date': '2023/02/09'
   }
 
   return (
